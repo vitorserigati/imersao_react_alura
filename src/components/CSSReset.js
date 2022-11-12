@@ -9,6 +9,7 @@ export const CSSReset = createGlobalStyle`
   }
   body {
     font-family: sans-serif;
+    padding-bottom: 16px
   }
   /* NextJS */
   html {
