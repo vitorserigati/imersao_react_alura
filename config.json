@@ -2,6 +2,32 @@
     "name": "Vitor Serigati",
     "job": "Software Engineer",
     "picture": "vitorserigati",
+    "favorites": [
+        {
+            "id": 1,
+            "name": "@omariosouto",
+            "foto": "omariosouto",
+            "url": "omariosouto"
+        },
+        {
+            "id": 2,
+            "name": "@DanielHe4rt",
+            "foto": "DanielHe4rt",
+            "url": "DanielHe4rt"
+        },
+        {
+            "id": 3,
+            "name": "@rafaballerini",
+            "foto": "rafaballerini",
+            "url": "rafaballerini"
+        },
+        {
+            "id": 4,
+            "name": "@filipedeschamps",
+            "foto": "filipedeschamps",
+            "url": "filipedeschamps"
+        }
+    ],
     "playlists": {
         "jogos": [
             {

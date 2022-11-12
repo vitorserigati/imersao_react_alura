@@ -11,8 +11,13 @@ const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 16px 32px;
+    padding: 30px 32px;
     gap: 16px;
+    background-image: url("https://images.unsplash.com/photo-1607112812619-182cb1c7bb61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
   }
 `;
 export default function Header(props) {
