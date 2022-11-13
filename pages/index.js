@@ -8,11 +8,17 @@ import { useState } from "react";
 
 function HomePage() {
   const [search, setSearch] = useState("");
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <>
       <CSSReset />
       <div>
-        <Menu searchInput={setSearch} searchValue={search} />
+        <Menu
+          searchInput={setSearch}
+          searchValue={search}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
         <Header user={config} />
         <TimeLine searchValue={search} playlists={config.playlists} />
         <Favorites persons={config.favorites} />
