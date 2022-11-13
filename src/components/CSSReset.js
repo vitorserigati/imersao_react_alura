@@ -9,7 +9,9 @@ export const CSSReset = createGlobalStyle`
   }
   body {
     font-family: sans-serif;
-    padding-bottom: 16px
+    padding-bottom: 16px;
+    background-color: ${({ theme }) => theme.backgroundBase};
+    color: ${({ theme }) => theme.textColorBase};
   }
   /* NextJS */
   html {

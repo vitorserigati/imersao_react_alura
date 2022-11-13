@@ -1,48 +1,63 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { ColorModeContext } from "./ColorMode";
 
-export default function ToggleDark({ darkMode, setDarkMode }) {
-  function isDark() {
-    darkMode ? setDarkMode(false) : setDarkMode(true);
-  }
-  return <StyledToggleDark onClick={isDark} darkMode={darkMode} />;
+export default function ToggleDark() {
+  const context = useContext(ColorModeContext);
+
+  return (
+    <StyledToggleDark>
+      <input id="darkmode" type="checkbox" onChange={context.toggleMode} />
+      <label htmlFor="darkmode" className="darkmode-switch">
+        <span>🌙</span>
+        <span>☀️</span>
+      </label>
+    </StyledToggleDark>
+  );
 }
 
 const StyledToggleDark = styled.div`
-  width: 40px;
-  height: 20px;
-  border-radius: 30px;
-  display: flex;
+  background-color: #333333;
+  border: 0;
   padding: 3px;
-  align-items: center;
-  background-color: ${({ darkMode }) => {
-    return darkMode ? "black" : "white";
-  }};
-  transition: background-color 500ms linear;
+  font-size: 12px;
+  width: 50px;
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10000px;
   cursor: pointer;
   position: relative;
-  box-shadow: inset 0px 0px 4px
-    ${({ darkMode }) => {
-      return darkMode ? "white" : "black";
-    }};
-  &:before {
-    content: "a";
-    color: rgba(0, 0, 0, 0);
+  label {
+    width: 50px;
+    cursor: pointer;
+  }
+  span {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label:before {
+    content: "";
+    background-color: #fafafa;
+    border: 1px solid #333333;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
     position: absolute;
-    background-color: ${({ darkMode }) => {
-      return darkMode ? "white" : "black";
-    }};
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin: 0 1%;
-    box-shadow: inset 0px 0px 2px
-      ${({ darkMode }) => {
-        return darkMode ? "black" : "white";
-      }};
-    left: ${({ darkMode }) => {
-      return darkMode ? "23px" : "2px";
-    }};
-    transition: background-color 500ms linear;
-    transition: left 500ms linear;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked + label:before {
+    transform: translateX(100%);
   }
 `;
