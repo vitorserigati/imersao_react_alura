@@ -26,19 +26,14 @@ const StyledMenu = styled.header`
   }
 `;
 
-export default function Menu({
-  searchValue,
-  searchInput,
-  darkMode,
-  setDarkMode,
-}) {
+export default function Menu({ searchValue, searchInput }) {
   return (
     <StyledMenu>
       <div>
         <Logo />
       </div>
       <Search searchValue={searchValue} searchInput={searchInput} />
-      <ToggleDark darkMode={darkMode} setDarkMode={setDarkMode} />
+      <ToggleDark />
     </StyledMenu>
   );
 }
