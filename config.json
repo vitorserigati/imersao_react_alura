@@ -37,7 +37,7 @@
                 "id": 1
             },
             {
-                "title": "Frostpunk - Neve e Steak tartare",
+                "title": "Pokemon",
                 "url": "https://www.youtube.com/watch?v=O8jtAyPuhNg",
                 "thumb": "https://img.youtube.com/vi/O8jtAyPuhNg/hqdefault.jpg",
                 "id": 2
@@ -87,7 +87,7 @@
                 "id": 9
             },
             {
-                "title": "Jogo com JavaScript #01: Criando um Flappy Bird do ZERO!!!",
+                "title": "Landing Page com Html e CSS",
                 "url": "https://www.youtube.com/watch?v=llF6vD-RljE",
                 "thumb": "https://img.youtube.com/vi/llF6vD-RljE/hqdefault.jpg",
                 "id": 10
@@ -137,7 +137,7 @@
         ],
         "back-end": [
             {
-                "title": "Node JS: Construindo CRUDs com file system focando em serialização e JSON",
+                "title": "Node JS: Construindo CRUDs com file system focando em serialização e JSON (devSoutinho)",
                 "url": "https://www.youtube.com/watch?v=dvd3pNYh7So",
                 "thumb": "https://img.youtube.com/vi/dvd3pNYh7So/hqdefault.jpg",
                 "id": 18

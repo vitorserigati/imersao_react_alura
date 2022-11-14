@@ -55,18 +55,20 @@ export default function TimeLine({ searchValue, ...props }) {
           <section key={key}>
             <h2>{key}</h2>
             <div>
-              {videos.filter((video) => {
-                const searchValueNormalized = searchValue.toLowerCase();
-                const titleNormalized = video.title.toLowerCase();
-                return titleNormalized.includes(searchValueNormalized)
-              }).map((video) => {
-                return (
-                  <a href={video.url} key={video.id}>
-                    <img src={video.thumb} />
-                    <span>{video.title}</span>
-                  </a>
-                );
-              })}
+              {videos
+                .filter((video) => {
+                  const searchValueNormalized = searchValue.toLowerCase();
+                  const titleNormalized = video.title.toLowerCase();
+                  return titleNormalized.includes(searchValueNormalized);
+                })
+                .map((video) => {
+                  return (
+                    <a href={video.url} key={video.title}>
+                      <img src={video.thumb} />
+                      <span>{video.title}</span>
+                    </a>
+                  );
+                })}
             </div>
           </section>
         );
