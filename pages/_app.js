@@ -5,6 +5,7 @@ import ColorModeProvider, {
   ColorModeContext,
 } from "../src/components/menu/components/ColorMode";
 import theme from "../src/components/themes";
+import RegisterVideo from "../src/components/RegisterVideo";
 
 function ProviderWrapper(props) {
   return (
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme[context.mode]}>
       <CSSReset />
       <Component {...pageProps} />
+      <RegisterVideo />
     </ThemeProvider>
   );
 }
